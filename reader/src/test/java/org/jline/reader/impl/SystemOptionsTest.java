@@ -10,7 +10,6 @@ package org.jline.reader.impl;
 
 import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
