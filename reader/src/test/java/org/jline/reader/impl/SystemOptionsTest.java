@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
  public class SystemOptionsTest {
      @Test
-     public void testSystemOptions(){
+     public void testSystemOptions() {
       LineReader reader1 = LineReaderBuilder.builder().build();
       assertFalse(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
 
