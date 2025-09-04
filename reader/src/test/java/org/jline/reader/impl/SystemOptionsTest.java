@@ -19,7 +19,7 @@ public class SystemOptionsTest {
     @Test
     public void testSystemOptions() {
         LineReader reader1 = LineReaderBuilder.builder().build();
-        assertFalse(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
+        assertFalse(reader1.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
 
         System.setProperty("org.jline.reader.props.disable-event-expansion", "on");
         LineReader reader2 = LineReaderBuilder.builder().build();
