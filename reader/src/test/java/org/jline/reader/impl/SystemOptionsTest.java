@@ -11,14 +11,14 @@ package org.jline.reader.impl;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
- public class SystemOptionsTest {
-     @Test
-     public void testSystemOptions() {
-      LineReader reader1 = LineReaderBuilder.builder().build();
-      assertFalse(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
+public class SystemOptionsTest {
+    @Test
+    public void testSystemOptions() {
+        LineReader reader1 = LineReaderBuilder.builder().build();
+        assertFalse(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
 
-      System.setProperty("org.jline.reader.props.disable-event-expansion","on");
-      LineReader reader2 = LineReaderBuilder.builder().build();
-      assertTrue(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
-     }
- }
+        System.setProperty("org.jline.reader.props.disable-event-expansion","on");
+        LineReader reader2 = LineReaderBuilder.builder().build();
+        assertTrue(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
+    }
+}
