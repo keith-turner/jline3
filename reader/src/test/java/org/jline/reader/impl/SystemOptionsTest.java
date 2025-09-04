@@ -22,7 +22,11 @@ public class SystemOptionsTest {
         assertFalse(reader1.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
 
         System.setProperty("org.jline.reader.props.disable-event-expansion", "on");
-        LineReader reader2 = LineReaderBuilder.builder().build();
-        assertTrue(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
+        try {
+            LineReader reader2 = LineReaderBuilder.builder().build();
+            assertTrue(reader2.isSet(LineReader.Option.DISABLE_EVENT_EXPANSION));
+        }finally {
+            System.clearProperty("org.jline.reader.props.disable-event-expansion");
+        }
     }
 }
